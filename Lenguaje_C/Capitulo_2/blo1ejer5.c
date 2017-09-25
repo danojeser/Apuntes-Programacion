@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Pedir al usuario cinco números, e imprimir posteriormente el mayor valor introducido y el menor valor introducido.
+/*Pedir al usuario cinco números, e imprimir posteriormente el mayor valor introducido 
+y el menor valor introducido.*/
 
 int main (int argc, char *argv[]) {
 
