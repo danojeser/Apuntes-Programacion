@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Realiza un programa en C que pida al usuario un número entero, y calcule e imprima en pantalla si 
+el número es positivo o negativo.*/
 
 int main (int argc, char *argv[]) {
 	int a;

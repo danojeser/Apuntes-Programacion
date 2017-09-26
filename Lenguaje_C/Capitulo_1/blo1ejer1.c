@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Realiza un programa en C que pida al usuario tres números enteros, 
+y localice e imprima en pantalla el mayor y el menor de los tres introducidos.*/
+
 
 int main (int argc, char *argv[]) {
 	int a, b, c;

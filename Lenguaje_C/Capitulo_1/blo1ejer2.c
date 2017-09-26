@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Realiza un programa en C que pida al usuario dos números enteros, y calcule e imprima en pantalla la suma de los dos.*/
 
 int main (int argc, char *argv[]) {
 	int a, b;

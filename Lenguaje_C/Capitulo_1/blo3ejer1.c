@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Programa que lea números mientras no se introduzca un cero. De cada número leído mostrará su tabla de multiplicar.*/
 
 int main (int argc, char *argv[]) {
 

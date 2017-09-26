@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+/* Realiza una calculadora avanzada, del tipo del Ejercicio_016_switch_ejemplo_de_calculadora.c, 
+pero con la particularidad de que las operaciones deben ser raices, potencias y el módulo de la división.*/
 
 int main (int argc, char *argv[]) {
 
@@ -41,8 +43,8 @@ int main (int argc, char *argv[]) {
             resultado = num1 % num2;
             printf ("\nResultado: %d\n", resultado);
             break;
-        default: // Opci�n incorrecta en el men�
-            printf ("\nOpci�n incorrecta\n");
+        default: // Opcion incorrecta en el menu
+            printf ("\nOpcion incorrecta\n");
             break;
     }
 

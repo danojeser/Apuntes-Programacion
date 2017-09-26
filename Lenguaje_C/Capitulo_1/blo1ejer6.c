@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Realiza un programa en C que pida un número al usuario. Si el número está entre 2 y 4 (ambos inclusive) debe imprimir
+en pantalla la palabra "pequeño", si el número está entre 5 y 7 (ambos inclusive) se debe imprimir la palabra "mediano",
+y si el número está entre 8 y 12 se debe imprimir la palabra "grande". Si el número no es ninguno de estos se debe 
+imprimir la frase "número no válido". Debes utilizar una sentencia switch para poder resolver este ejercicio.*/
 
 int main (int argc, char *argv[]) {
 

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Realiza un ejercicio en C que pida dos variables al usuario, tras lo cual, 
+muestre en pantalla el númeor mayor de los dos introducidos.*/
 
 int main (int argc, char *argv[]) {
 

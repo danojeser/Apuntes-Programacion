@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Repetir el ejercicio anterior para mostrar el número menor de los dos introducidos.*/
 
 int main (int argc, char *argv[]) {
 
