@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /*Repetir el ejercicio 3º de este bloque de ejercicios,
- pero mostrando el menor valor de los cinco introducidos por el usuario.*/
+pero mostrando el menor valor de los cinco introducidos por el usuario.*/
 
  int main (int argc, char *argv[]) {
     
