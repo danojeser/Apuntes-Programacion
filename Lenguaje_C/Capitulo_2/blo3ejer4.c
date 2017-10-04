@@ -11,6 +11,42 @@ la vuelta (1625 u) debería de ser de la siguiente forma:
 - 1 moneda de 25 = 25*/
 
 int main (int argc, char *argv[]) {
+
+    int precio, dinero, cambio;
+
+    printf("Precio del producto: ");
+    scanf("%d",&precio);
+
+    printf("Dinero introducido: ");
+    scanf("%d",&dinero);
+
+    if(dinero < precio){
+        printf("Venga crack, GL in esports");
+    }
+    else{
+        cambio = dinero - precio;
+        if(cambio > 100){
+            printf("\nMonedas de 100: %d", cambio/100);
+            cambio = cambio % 100;
+        }
+        if(cambio > 50){
+            printf("\nMonedas de 50: %d", cambio/50);
+            cambio = cambio % 50;
+        }
+        if(cambio > 25){
+            printf("\nMonedas de 25: %d", cambio/25);
+            cambio = cambio % 25;
+        }
+        if(cambio > 5){
+            printf("\nMonedas de 5: %d", cambio/5);
+            cambio = cambio % 5;
+        }
+        if(cambio > 1){
+            printf("\nMonedas de 1: %d", cambio);
+        }
+    }
     
-    
+    printf("\n");
+    system("pause");
+    return 0;
 }

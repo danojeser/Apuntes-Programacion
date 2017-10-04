@@ -7,11 +7,15 @@ y recuerda que un número impar es aquel cuyo resto de su división entre dos se
 
 int main (int argc, char *argv[]) {
 
-    int a;
+    int num;
     
-	printf("Primer numero: ");
-    scanf("%d", &a);
+	printf("Dime un numero: ");
+    scanf("%d", &num);
     
+    if(num % 2 == 0){
+        printf("El numero es par");
+    }
+
     return 0;
     
 }

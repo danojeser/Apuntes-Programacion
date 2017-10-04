@@ -49,6 +49,8 @@ int main (int argc, char *argv[]) {
     }
 
 
+    printf("\n");
+    system("pause");
     return 0;
     
 }

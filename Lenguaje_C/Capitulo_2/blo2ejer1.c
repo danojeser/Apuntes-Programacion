@@ -39,6 +39,8 @@ int main (int argc, char *argv[]) {
     printf("Suma grandes: %d",sumG);
     
 
+    printf("\n");
+    system("pause");
     return 0;
     
 }
