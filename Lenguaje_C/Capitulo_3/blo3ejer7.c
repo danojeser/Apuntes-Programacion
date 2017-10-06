@@ -15,10 +15,9 @@ int main (int argc, char *argv[]) {
             if(num < 0){
                 neg++;
             }
-            else{
-                if(num > 0){
-                    pos++;
-                }
+            else{    
+                pos++;
+            }
             }
         }
     }

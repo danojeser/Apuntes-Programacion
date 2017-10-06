@@ -31,7 +31,7 @@ int main (int argc, char *argv[]) {
     
     printf("El menor es: %d", menor);
     printf("El mayor es: %d", mayor);
-
+    
     printf("\n");
     system("pause");
     return 0;

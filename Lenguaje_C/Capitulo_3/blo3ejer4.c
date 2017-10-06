@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*Realiza un ejercicio igual al anterior, con la particularidad de que debe imprimir en pantalla el menor, no el mayor.*/
+/*Realiza un ejercicio igual al anterior, con la particularidad de que debe imprimir en pantalla el menor, 
+no el mayor.*/
 
 int main (int argc, char *argv[]) {
 
