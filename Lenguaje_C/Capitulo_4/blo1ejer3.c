@@ -9,12 +9,25 @@ El usuario debe encontrar la carta roja, para lo que sólo tendrá una tirada.*/
 
 int main (int argc, char *argv[]) {
 
-	int a, b, c;
-	printf("Primer numero: ");
-    scanf("%d", &a);
+	int cr, tirada;
+    
+    srand(time(NULL));
+    
+    cr = (rand() % 3) + 1 ;
+	
+	printf ("En que posicion esta la carta roja? :");
+	scanf("%d",&tirada);
+	
+	if (tirada == cr){
+        printf("\n\nHas ganado");           	
+    }
+    else {
+        printf("\n\nHas perdido");
+    }
+	
 
-    printf("\n");
-    system("pause");
+	printf ("\n");
+    system ("pause");
     return 0;
     
 }
