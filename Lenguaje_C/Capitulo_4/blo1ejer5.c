@@ -5,8 +5,6 @@
 triplique su dinero. El dinero inicial debe ser 50 €. El usuario debe tener un acumulador de dinero y 
 debe decidir cuanto dinero apuesta cada vez.*/
 
-//SIN TERMINAR
-
 int main (int argc, char *argv[]) {
 
 	int cr, tirada, i, dinero = 50, apuesta = 60;
@@ -17,24 +15,29 @@ int main (int argc, char *argv[]) {
     
     for(i=0; i < 6; i++){
         
-        for(;apuesta>;){
-
-            
-        }
         printf("Cuanto dinero quieres apostar? (Tienes %d): ",dinero);
         scanf("%d",&apuesta);
 
-
-        printf ("En que posicion esta la carta roja?(Hay 5 posiciones 1-5) :");
-        scanf("%d",&tirada);
+        if(apuesta > dinero){
+            printf("Ha apostado mas dinero del que tiene.");
+            //Retrocedemos en uno el bucle, para que el intento erroneo no cuente
+            i--;
+        }
+        else{
+            printf ("En que posicion esta la carta roja?(Hay 5 posiciones 1-5) :");
+            scanf("%d",&tirada);
+            
+            if (tirada == cr){
+                dinero+=apuesta;
+                printf("\n\nHas ganado. Dinero: %d",dinero);
+                i=7;         	
+            }
+            else {
+                printf("\n\nHas perdido %d",apuesta);
+                dinero -= apuesta;
+            }
+        }
         
-        if (tirada == cr){
-            printf("\n\nHas ganado");
-            i=7;         	
-        }
-        else {
-            printf("\n\nHas perdido");
-        }
     }
 	
 	
