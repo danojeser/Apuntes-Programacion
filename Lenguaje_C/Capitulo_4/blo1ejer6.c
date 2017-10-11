@@ -42,19 +42,19 @@ int main (int argc, char *argv[]) {
 
         printf("\nEl numero ganador es: %d", numGanador);
         printf("\nComparemos los numeros");
-        printf("\nTuyo\tMio");
+        printf("\nSeleccionado\tGanador");
         
         for(i = 10000; i>0; i=i/10){
-            printf("\n%d----%d",(numero/i),(numGanador/i));
+            printf("\n%d\t%d",(numero/i),(numGanador/i));
             numero -= (numero / i * i);
             numGanador -= (numGanador / i * i);
         }
 
+        /* ESTA MAL
         if(numero == numGanador){
             printf("GG");
-        }
+        }*/
         
-
     }
 
     printf("\n");
