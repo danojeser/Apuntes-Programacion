@@ -17,15 +17,32 @@ posición aleatoria en su interior.
 
 int main (int argc, char *argv[]) {
 
-    int i, j, pos, cont;
+    int i, j, pos, cont = 0;
     srand(time(NULL));
-    pos = rand() ;
+    pos = rand() % 144 + 1;
 
-    for(i = 0; i< 20; i++){
-        for(j = 0; j < 10; j++){
-
+    for(i = 0; i< 10; i++){
+        for(j = 0; j < 20; j++){
+            //Dibuja la primera y ultima linea
+            if(i == 0 || i == 9){
+                printf("*");
+            }
+            else{
+                if(j==0 || j==19){ //Dibuja las aristas laterales del rectangulo
+                    printf("*");
+                }
+                else{ //Dibuja el espacio vacio del rectangulo
+                    cont++;
+                    if(cont == pos){
+                        printf("0");
+                    }
+                    else{
+                        printf(" ");
+                    }
+                }
+            }
         }
-
+        printf("\n");
     }
 
     printf("\n");
