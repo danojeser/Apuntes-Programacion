@@ -20,7 +20,7 @@ int main (int argc, char *argv[]) {
 	int i, j;
     srand(time(NULL));
 
-    for(i = 0; i< 10; i++){
+    for(i = 0; i< 10; i++){ 
         for(j = 0; j < 20; j++){
             //Dibuja la primera y ultima linea
             if(i == 0 || i == 9){
@@ -30,7 +30,7 @@ int main (int argc, char *argv[]) {
                 if(j==0 || j==19){ //Dibuja las aristas laterales del rectangulo
                     printf("*");
                 }
-                else{ //Dibuja el espacio vacio del rectangulo
+                else{ //Dibuja los numeros del interior
                     printf("%d", rand() % 2);
                 }
             }
