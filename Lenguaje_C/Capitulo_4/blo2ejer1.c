@@ -5,7 +5,7 @@
 seis números y otro complementario entre 1 y 49 que no se repitan. 
 Ejemplo: Combinación: 2 14 20 37 39 41 47 complementario: 13 */
 
-//TODO: SIN TERMINAR
+//TO-DO: SIN TERMINAR
 
 int main (int argc, char *argv[]) {
 
