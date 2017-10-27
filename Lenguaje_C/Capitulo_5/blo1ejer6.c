@@ -13,7 +13,7 @@ int main (int argc, char *argv[]) {
     printf("\n");
     system("pause");
     return 0;
-    
+
 }
 
 int numeroAleImpar(){
@@ -26,5 +26,4 @@ int numeroAleImpar(){
     }
 
     return num;
-
 }

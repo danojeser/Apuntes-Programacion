@@ -21,7 +21,8 @@ int hastaCienRecursivo(int num){
 
     if(num == 100){
         return 0;
-    }else{
+    }
+    else{
         return hastaCienRecursivo(num+1);
     }
 
