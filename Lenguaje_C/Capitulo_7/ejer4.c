@@ -16,7 +16,7 @@ int main (int argc, char *argv[]) {
 }
 
 
-void arrayNumerosAleatorios(int array[], int longitud, int inferior, int superior){    
+void arrayNumerosAleatorios(int array[], int longitud, int inferior, int superior){
     int i;
     srand(time(NULL));
 
