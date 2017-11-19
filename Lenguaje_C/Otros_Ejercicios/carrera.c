@@ -60,7 +60,7 @@ int main (int argc, char *argv[]) {
        
     }while(!juegoFinalizado(jugadoresEnMeta));
    
-    imprimirPodium( jugadoresEnMeta);
+    imprimirPodium(jugadoresEnMeta);
    
    
    

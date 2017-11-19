@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <libreriaArray.c>
-#include <libreria.c>
+//#include <libreriaArray.c>
+//#include <libreria.c>
 #define LONGITUD 101
 #define JUGADORES 5
 
@@ -11,6 +11,7 @@ void iniciarPosiciones(int posicion[]);
 int nuevaPosicionJugador(int tablero[], int posicion, int dado);
 int juegoFinalizado(int podium[]);
 void llenarPodium(int podium[], int jugador);
+void imprimirPodium(int podium[]);
 
 int main (int argc, char *argv[]) {
 
@@ -34,7 +35,7 @@ int main (int argc, char *argv[]) {
 
             //Nueva posicion del jugador
             posicion[turno] = nuevaPosicionJugador(tablero, posicion[turno], dado);
-            if(posicion[turno] >= 100){
+            if(posicion[turno] == 100){
                 printf("\nEl jugador %d ha terminado. Enhorabuena!!", turno+1);
                 llenarPodium(podium, turno);
             }
@@ -49,11 +50,12 @@ int main (int argc, char *argv[]) {
         //Cambiar turno
         turno++;
         turno %= 5;
-
-        
+        juegoTerminado = juegoFinalizado(podium);
 
     } while(!juegoTerminado);
 
+    //Imprimir podium
+    imprimirPodium(podium);
 
     printf("\n");
     system("pause");
@@ -61,9 +63,11 @@ int main (int argc, char *argv[]) {
     
 }
 
+
 int lanzarDado(){
     return rand() % 6 + 1;
 }
+
 
 /*********************************
  * Funcion que pone el tablero a 0 y posiciona las serpientes y las escaleras dandole el valor a la posicion
@@ -88,11 +92,12 @@ void iniciarTablero(int tablero[]){
     tablero[64] = -4;
     tablero[72] = 19;
     tablero[80] = 19;
-    tablero[87] = 36;
+    tablero[87] = -51;
     tablero[93] = -20;
     tablero[95] = -20;
     tablero[98] = -19;
 }
+
 
 /****************************
  * Funcion que coloca a todos los jugadores en la casilla "0"
@@ -104,18 +109,28 @@ void iniciarPosiciones(int posicion[]){
     }
 }
 
+
 int nuevaPosicionJugador(int tablero[], int posicion, int dado){
     int aux = posicion + dado;
     printf("\nTe mueves a la casilla: %d", aux);
 
-    if(tablero[aux] > 0){
+    if(tablero[aux] > 0 && aux < 100){  //Compruebo que el indice no se salga del array
         printf("\nSubes por la escalera");
     }
-    if(tablero[aux] < 0){
+    if(tablero[aux] < 0 && aux < 100){
         printf("\nBajas por la serpiente");
     }
 
-    return posicion+dado+tablero[posicion+dado];
+    //Si el jugador se ha pasado de la casilla 100 vuelve hacia atras las casillas que se haya pasado
+    if(aux > 100){
+        printf("\nTe has pasado de largo");
+        aux = 100 - (aux - 100);
+    }
+    else{
+        aux = posicion+dado+tablero[aux];
+    }
+
+    return aux;
 }
 
 
@@ -123,17 +138,17 @@ void llenarPodium(int podium[], int jugador){
     int i; 
 
     for(i = 0; i < JUGADORES; i++){
-        if(podium[i] != 0){
-            podium = jugador+1;
-            break;
+        if(podium[i] == 0){
+            podium[i] = jugador + 1;
+            i = JUGADORES + 2;
         }
     }
 }
 
 
 int juegoFinalizado(int podium[]){
-    int aux, i;
-    for(i = 0; i <JUGADORES; i++){
+    int aux = 0, i;
+    for(i = 0; i < JUGADORES; i++){
         if(podium[i] != 0){
             aux++;
         }
@@ -144,5 +159,14 @@ int juegoFinalizado(int podium[]){
     }
     else{
         return 0;
+    }
+}
+
+
+void imprimirPodium(int podium[]){
+    int i;
+    
+    for(i = 0; i < JUGADORES; i++){
+        printf("\nPosicion %d Jugador %d", i+1, podium[i]);
     }
 }
