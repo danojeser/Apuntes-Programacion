@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <libreriaArray.c>
-#include <libreria.c>
+//#include <libreriaArray.c>
+//#include <libreria.c>
 
 #define NUM_BOLOS 10
 #define PROB_MIN 30 //Probabilidad minima de caida de los bolos
